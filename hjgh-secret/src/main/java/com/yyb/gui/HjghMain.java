@@ -10,6 +10,18 @@ import com.yyb.gui.box.Boxx;
 public class HjghMain {
     public static void main(String[] args) {
         System.out.println("THis is my first java GUI demo");
+		
+		try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        }catch(Exception e) {
+            e.printStackTrace();
+        }
+		
         Boxx boxx = new Boxx();
         boxx.run();
     }
